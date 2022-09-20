@@ -8,7 +8,7 @@ import { TitleOne, Wrapper, WrapperContact } from './PhoneBook.styled.js';
 export const PhoneBook = () => {
   const [filter, setFilter] = useState('');
   const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem('contacts'))
+    JSON.parse(localStorage.getItem('contacts') || [])
   );
 
   useEffect(() => {
